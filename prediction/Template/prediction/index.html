@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content%}
+
+<div class="valign-wrapper row login-box">
+    <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4 orange">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="card-content">
+                <label class="teal-text  darken-3"
+                    style="font-size:   20px;font-weight : bold; font-family: 'Times New Roman', Times, serif; padding:10px">Select
+                    Date</label>
+                <input type="text" class="datepicker white-text" style="padding:10px " placeholder='JUN 15 ,2011'
+                    name='date' required>
+
+                <div>
+                    <label class="teal-text  darken-3"
+                        style="font-size:   20px;font-weight : bold; font-family: 'Times New Roman', Times, serif; padding:10px">Stock</label>
+                    <select class="browser-default orange lighten-4 teal-text  input-field col s12"
+                        style="padding:10px " name="stock_name" required>
+
+                        <option value="" disabled selected>Choose your Stock</option>
+                        {% for i in stocklist %}
+                        <option value={{i}}>{{i}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class=" card-action" style="padding: 10px">
+                    <button class="btn-floating btn-large waves-effect waves-light red right green " type='submit'><i
+                            class="material-icons">done</i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
