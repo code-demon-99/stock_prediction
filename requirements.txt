@@ -3,7 +3,7 @@ asgiref==3.2.3
 astor==0.8.1
 coverage==5.0.3
 cycler==0.10.0
-Django==3.0.3
+Django==3.0.14
 django-materialize==1.0.1a2
 djangorestframework==3.11.0
 gast==0.3.3
